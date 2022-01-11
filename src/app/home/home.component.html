@@ -1,0 +1,37 @@
+<div *ngIf="info.token; else loggedOut">
+  <h5 class="text-primary">Your Information</h5>
+  <p>
+    <strong>Username:</strong> {{info.username}}<br/>
+    <strong>Roles:</strong> {{info.authorities}}<br />
+    <strong>Token:</strong> {{info.token}}.
+  </p>
+  <button class="btn btn-secondary" (click)="logout()">Logout</button>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+
+  <!-- <table class="table mt-3" >
+    <thead>
+        <tr>
+            <th scope="col"> ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">content</th>
+
+            
+        </tr>
+    </thead>
+    <tbody><tr *ngFor="let row of lockerServiceData">
+        <td>{{row.content.id}}</td>
+        <td>{{row.content.title}}</td>
+        <td>{{row.content.description}}</td>
+        <td>{{row.content.content}}</td>
+        <td>
+         
+        </td>
+    </tr>
+
+    </tbody>
+</table> -->
+</ng-template>
