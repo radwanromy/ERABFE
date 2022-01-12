@@ -4,7 +4,6 @@
  <br><br>
     </div>
     <table align="center" width=100%>
-      
     <ul class="nav navbar-nav" routerLinkActive="active" style="display: inline;font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849);">
       <li class="nav-item"><a class="nav-link" routerLink="home" style="display: inline; font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849);">Home</a></li>
       <li *ngIf="authority === 'user'" class="nav-item" style="display: inline;">
@@ -19,9 +18,7 @@
       <li *ngIf="!authority" class="nav-item">
         <a class="nav-link" routerLink="auth/login" style="font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849); padding-bottom: 10px;">Login</a><br>
       </li>
-    </ul>
-    
- 
+    </ul> 
   </table>
   <br>
   </div>
@@ -29,7 +26,6 @@
 <div class="container" align = center>
   <router-outlet></router-outlet>
 </div>
-
 <br>
 <Br>
   <br>

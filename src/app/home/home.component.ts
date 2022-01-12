@@ -10,25 +10,25 @@ import { LockerServiceModel } from './home.model';
 })
 export class HomeComponent implements OnInit {
   info: any;
-  lockerServiceData!: any;
+//   lockerServiceData!: any;
 
-  lockerServiceModelObj : LockerServiceModel = new LockerServiceModel();
- showAdd!: boolean;
-  formValue !: FormGroup;
+//   lockerServiceModelObj : LockerServiceModel = new LockerServiceModel();
+//  showAdd!: boolean;
+//   formValue !: FormGroup;
   //private formBuilder: FormBuilder, private api : UserService,
-  constructor(private formBuilder: FormBuilder, private api : UserService, private token: TokenStorageService) { }
+  constructor( private token: TokenStorageService) { }
 
   ngOnInit() {
 
 
-    this.formValue = this.formBuilder.group({
+    // this.formValue = this.formBuilder.group({
 
-      id:[''],
-      title:[''],
-      description:[''],
-      content:['']
-    })
-    this.getAllLockerServiceDetails();
+    //   id:[''],
+    //   title:[''],
+    //   description:[''],
+    //   content:['']
+    // })
+    // this.getAllDetails();
   
     
     this.info = {
@@ -43,21 +43,21 @@ export class HomeComponent implements OnInit {
     window.location.reload();
   }
 
-  getAllLockerServiceDetails(){
+  // getAllDetails(){
     
-    this.api.getEmployee()
-    .subscribe( (res: any) => {
-      console.log(res)
-     // var obj = JSON.parse(res)
+  //   this.api.getEmployee()
+  //   .subscribe( (res: any) => {
+  //     console.log(res)
+  //    var obj = JSON.parse(res)
      
-      // console.log(res.content[0]);
-      // console.log(res.content[0].id);
-      // console.log(res.content[0].comments);
-      // console.log(res.content[0].comments[0].id);
+  //     console.log(res.content[0]);
+  //     console.log(res.content[0].id);
+  //     console.log(res.content[0].comments);
+  //     console.log(res.content[0].comments[0].id);
       
-      this.lockerServiceData = res;
-      this.showAdd = true;
-    })
-  }
+  //     this.lockerServiceData = res;
+  //     this.showAdd = true;
+  //   })
+  // }
   
 }

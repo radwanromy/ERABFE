@@ -116,7 +116,7 @@ button {
   border-radius:25px;
   cursor: pointer;
   font-weight: 900;
-  font-size:15px;
+  font-size:25px;
   box-shadow: 4px 4px 4px #2c8099a1, -4px -4px 4px rgba(70, 123, 158, 0.623);
   font-family: poppins;
   border-radius: 25px;
@@ -193,4 +193,5 @@ button{
 
 _ngcontent-smu-c54{
   border-radius: 10px;
+  font-size: 18px;
 }
