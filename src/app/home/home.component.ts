@@ -10,22 +10,23 @@ import { LockerServiceModel } from './home.model';
 })
 export class HomeComponent implements OnInit {
   info: any;
-  lockerServiceData!: any;
+  // lockerServiceData!: any;
   allData : any;
 
   lockerServiceModelObj : LockerServiceModel = new LockerServiceModel();
- showAdd!: boolean;
-  formValue !: FormGroup;
+  lockerServiceData !: any;
+  // showAdd !: boolean;
+  // showUpdate !: boolean;
+  // formValue !: FormGroup;
   // private formBuilder: FormBuilder, private api : UserService,
   constructor( private token: TokenStorageService,private api : UserService) { }
 
+
+  //core.mjs 
   ngOnInit() {
     // this.login();
 
-      // id:[''],
-      // title:[''],
-      // description:[''],
-      // content:['']
+
 
     // this.formValue = this.formBuilder.group({
 
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit {
     //   description:[''],
     //   content:['']
     // })
-    this.getAllDetails();
+     this.getAllDetails();
   
     
     this.info = {
@@ -42,7 +43,7 @@ export class HomeComponent implements OnInit {
       username: this.token.getUsername(),
       authorities: this.token.getAuthorities()
     };
-  }
+}
 
   // login(){
   //   this.allData =this.usersevice.getEmployee();
@@ -58,18 +59,18 @@ export class HomeComponent implements OnInit {
     
     this.api.getEmployee()
     .subscribe( (res: any) => {
-      console.log("all blog data",res)
-     var obj = JSON.parse(res)
-     this.allData = obj.get("content");
-     console.log("all data",this.allData);
-     console.log("singele dtaa",this.allData.get());
-      console.log(res.content[0]);
-      console.log(res.content[0].id);
-      console.log(res.content[0].comments);
-      console.log(res.content[0].comments[0].id);
+      // console.log("all blog data",res)
+    //  var obj = JSON.parse(res)
+    //  this.allData = obj.get("content");
+    //  console.log("all data",this.allData);
+    //  console.log("singele dtaa",this.allData.get());
+      // console.log(res.content[0]);
+      // console.log(res.content[0].id);
+      // console.log(res.content[0].comments);
+      console.log(res.content[0].comments[0]);
       
       this.lockerServiceData = res;
-      this.showAdd = true;
+      // this.showAdd = true;
     })
   }
   

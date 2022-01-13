@@ -7,7 +7,7 @@ import { AuthLoginInfo } from './login-info';
 import { SignUpInfo } from './signup-info';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json;charset=UTF-8' })
 };
 
 @Injectable({
@@ -22,10 +22,10 @@ export class AuthService {
   }
 
   attemptAuth(credentials: AuthLoginInfo): Observable<JwtResponse> {
-    return this.http.post<JwtResponse>(this.loginUrl, credentials);
+    return this.http.post<JwtResponse>(this.loginUrl, credentials, httpOptions);
   }
 
-  signUp(info: SignUpInfo): Observable<string> {
-    return this.http.post<string>(this.signupUrl, info);
+  signUp(info: SignUpInfo): Observable<any> {
+    return this.http.post<any>(this.signupUrl, info, httpOptions);
   }
 }

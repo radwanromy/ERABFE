@@ -6,9 +6,9 @@ import { map, Observable } from 'rxjs';
 })
 export class UserService {
 
-  private userUrl = 'http://localhost:9099/api/auth';
-  private pmUrl = 'http://localhost:9099/api/auth';
-  private adminUrl = 'http://localhost:9099/api/auth';
+  private userUrl = 'http://localhost:9099/api/auth/user';
+  private pmUrl = 'http://localhost:9099/api/auth/pm';
+  private adminUrl = 'http://localhost:9099/api/auth/admin';
   
   constructor(private http: HttpClient) { }
 
@@ -32,7 +32,7 @@ export class UserService {
 
   getEmployee(){
     console.log("inside get emp sevice")
-    // console.log(this.http.get<any>("http://localhost:9099/api/posts/"));
+     console.log(this.http.get<any>("http://localhost:9099/api/posts/"));
     return this.http.get<any>("http://localhost:9099/api/posts/")
     .pipe(map((res: any) => {
       console.log("res",res)

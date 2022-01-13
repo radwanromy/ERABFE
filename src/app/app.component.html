@@ -1,13 +1,13 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<nav class="navbar navbar-inverse" width=100%>
+  <div class="container-fluid" width=100%>
+    <div class="navbar-header" width=100%>
  <br><br>
     </div>
     <table align="center" width=100%>
-    <ul class="nav navbar-nav" routerLinkActive="active" style="display: inline;font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849);">
-      <li class="nav-item"><a class="nav-link" routerLink="home" style="display: inline; font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849);">Home</a></li>
+    <ul class="nav navbar-nav" routerLinkActive="active" style="display: inline;font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849);">
+      <li class="nav-item"><a class="nav-link" routerLink="home" style="display: inline; font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849);">Home</a></li>
       <li *ngIf="authority === 'user'" class="nav-item" style="display: inline;">
-        <a class="nav-link" routerLink="user" style="display: inline; font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849);">User Board</a>
+        <a class="nav-link" routerLink="user" style="display: inline; font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849);">User Board</a>
       </li>
       <li *ngIf="authority === 'admin'" class="nav-item">
         <a class="nav-link" routerLink="admin">Admin Board</a>
@@ -16,7 +16,7 @@
         <a class="nav-link" routerLink="pm">PM Board</a>
       </li>
       <li *ngIf="!authority" class="nav-item">
-        <a class="nav-link" routerLink="auth/login" style="font-size: 20px; font-family:poppins; color: rgba(34, 91, 156, 0.849); padding-bottom: 10px;">Login</a><br>
+        <a class="nav-link" routerLink="auth/login" style="font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849); padding-bottom: 10px;">Login</a><br>
       </li>
     </ul> 
   </table>
@@ -40,7 +40,7 @@
         <tr  >
           
             <td >
-              <p align="left" style="font-size: 40px; padding-left: 20px; color: rgba(34, 91, 156, 0.849);">ERA BLOG APP</p>
+              <p align="left" style="font-size: xx-large; padding-left: 20px; color: rgba(34, 91, 156, 0.849);">ERA BLOG APP</p>
             
             </td>
             <td align="right"  >  <img src=".././././../assets/logo.png" height="50px" style="opacity: 80%; padding-right: 20px;">

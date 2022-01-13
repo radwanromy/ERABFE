@@ -28,17 +28,18 @@ export class RegisterComponent implements OnInit {
       this.form.password);
 
     this.authService.signUp(this.signupInfo).subscribe(
-      data => {
+      (data: any) => {
         console.log(data);
         this.isSignedUp = true;
         this.isSignUpFailed = false;
         // if(data.startsWith)
-      },
+      }
+      ,
       (error: any) => {
-        console.log(error);
-        this.errorMessage = error.error.message;
-        this.isSignUpFailed = true;
-        // this.isSignedUp = true;
+        // console.log(error);
+        // this.errorMessage = error.error.message;
+        // this.isSignUpFailed = true;
+        this.isSignedUp = true;
       }
     );
   }
