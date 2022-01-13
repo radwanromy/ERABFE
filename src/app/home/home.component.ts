@@ -59,14 +59,14 @@ export class HomeComponent implements OnInit {
     
     this.api.getEmployee()
     .subscribe( (res: any) => {
-      // console.log("all blog data",res)
-    //  var obj = JSON.parse(res)
+    //   console.log("all blog data",res)
+    //  var obj = res
     //  this.allData = obj.get("content");
     //  console.log("all data",this.allData);
     //  console.log("singele dtaa",this.allData.get());
-      // console.log(res.content[0]);
-      // console.log(res.content[0].id);
-      // console.log(res.content[0].comments);
+      console.log(res.content[0]);
+      console.log(res.content[0].id);
+      console.log(res.content[0].comments);
       console.log(res.content[0].comments[0]);
       
       this.lockerServiceData = res;
