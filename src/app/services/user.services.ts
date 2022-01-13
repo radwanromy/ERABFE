@@ -6,9 +6,9 @@ import { map, Observable } from 'rxjs';
 })
 export class UserService {
 
-  private userUrl = 'http://localhost:9090/api/auth';
-  private pmUrl = 'http://localhost:9090/api/auth';
-  private adminUrl = 'http://localhost:9090/api/auth';
+  private userUrl = 'http://localhost:9099/api/auth';
+  private pmUrl = 'http://localhost:9099/api/auth';
+  private adminUrl = 'http://localhost:9099/api/auth';
   
   constructor(private http: HttpClient) { }
 
@@ -24,21 +24,24 @@ export class UserService {
     return this.http.get(this.adminUrl, { responseType: 'text' });
   }
   postEmployee(data: any){
-    return this.http.post<any>("http://localhost:8088/api/posts/", data)
+    return this.http.post<any>("http://localhost:9099/api/posts/", data)
     .pipe(map((res: any) => {
       return res;
     }))
   }
 
   getEmployee(){
-    return this.http.get<any>("http://localhost:8088/api/posts/")
+    console.log("inside get emp sevice")
+    // console.log(this.http.get<any>("http://localhost:9099/api/posts/"));
+    return this.http.get<any>("http://localhost:9099/api/posts/")
     .pipe(map((res: any) => {
+      console.log("res",res)
       return res;
     }))
   }
 
   updateEmployee(data: any, id: number){
-    return this.http.put<any>("http://localhost:8088/api/posts/"+id, data)
+    return this.http.put<any>("http://localhost:9099/api/posts/"+id, data)
     .pipe(map((res: any) => {
       return res;
     }))
@@ -51,7 +54,7 @@ export class UserService {
     }))
   }
   getByIdRelease(id : number){
-    return this.http.get("http://localhost:8088/api/posts/"+id);   
+    return this.http.get("http://localhost:9099/api/posts/"+id);   
   }
 
 
