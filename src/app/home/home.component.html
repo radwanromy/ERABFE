@@ -20,11 +20,11 @@
           
       </tr>
   </thead>
-  <tbody><tr *ngFor="let row of lockerServiceData">
-      <td>{{row.content[0].id}}</td>
-      <td>{{row.content[0].title}}</td>
-      <td>{{row.content[0].description}}</td>
-      <td>{{row.content[0].content}}</td>
+  <tbody><tr *ngFor="let row of contentdata?.content">
+      <td>{{row.id}}</td>
+      <td>{{row.title}}</td>
+      <td>{{row.description}}</td>
+      <td>{{row.content}}</td>
 
      
       <td>
@@ -35,7 +35,7 @@
   </tbody>
 </table>
 
-
+<!-- 
 
 <table class="table mt-3" >
 <thead>
@@ -62,10 +62,10 @@
 </tr>
 
 </tbody>
-</table>
+</table> -->
 
 
-<table class="table mt-3" >
+<!-- <table class="table mt-3" >
 <thead>
     <tr>
      
@@ -93,7 +93,8 @@
 </tr>
 
 </tbody>
-</table>
+</table> -->
+
 <ng-template #loggedOut>
   Please login.
 
