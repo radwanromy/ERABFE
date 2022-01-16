@@ -29,13 +29,17 @@ export class LoginComponent implements OnInit {
     console.log(this.form);
 
     this.loginInfo = new AuthLoginInfo(
-      this.form.user_name,
+      this.form.usernameOrEmail,
       this.form.password);
 
+console.log("Enter in Submit");
     this.authService.attemptAuth(this.loginInfo).subscribe(
-      data => {
+
+      (data:any) => {
+              
+console.log("Enter in Auth Serve data");
         this.tokenStorage.saveToken(data.accessToken);
-        this.tokenStorage.saveUsername(data.user_name);
+        this.tokenStorage.saveUsername(data.usernameOrEmail);
         this.tokenStorage.saveAuthorities(data.authorities);
         this.isLoginFailed = false;
         this.isLoggedIn = true;
@@ -43,6 +47,8 @@ export class LoginComponent implements OnInit {
         this.reloadPage();
       },
       (error:any) => {
+              
+console.log("Enter in Auth Error");
         console.log(error);
         this.errorMessage = error.error.message;
         this.isLoginFailed = true;

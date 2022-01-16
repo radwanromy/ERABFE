@@ -64,6 +64,9 @@ export class HomeComponent implements OnInit {
     //  this.allData = obj.get("content");
     //  console.log("all data",this.allData);
     //  console.log("singele dtaa",this.allData.get());
+    //itterate the posts
+
+   // res.map()
       console.log(res.content[0]);
       console.log(res.content[0].id);
       console.log(res.content[0].comments);

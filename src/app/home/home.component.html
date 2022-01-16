@@ -8,104 +8,95 @@
   <button class="btn btn-secondary" (click)="logout()">Logout</button>
 </div>
 
+<table class="table mt-3" >
+  <thead>
+      <tr>
+          <th scope="col"> ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">content</th>
+        
+
+          
+      </tr>
+  </thead>
+  <tbody><tr *ngFor="let row of lockerServiceData">
+      <td>{{row.content[0].id}}</td>
+      <td>{{row.content[0].title}}</td>
+      <td>{{row.content[0].description}}</td>
+      <td>{{row.content[0].content}}</td>
+
+     
+      <td>
+       
+      </td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+
+<table class="table mt-3" >
+<thead>
+    <tr>
+        <th scope="col">Comment ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Body</th>
+  
+
+        
+    </tr>
+</thead>
+<tbody><tr *ngFor="let row of lockerServiceData">
+    <td>{{row.content[0].comments[0].id}}</td>
+    <td>{{row.content[0].comments[0].name}}</td>
+    <td>{{row.content[0].comments[0].email}}</td>
+    <td>{{row.content[0].comments[0].body}}</td>
+
+ 
+    <td>
+     
+    </td>
+</tr>
+
+</tbody>
+</table>
+
+
+<table class="table mt-3" >
+<thead>
+    <tr>
+     
+        <th scope="col">Page No</th>
+        <th scope="col">Page Size</th>
+        <th scope="col">Total Elements</th>
+        <th scope="col">Total Pages</th>
+        <th scope="col">Last</th>
+
+        
+    </tr>
+</thead>
+<tbody><tr *ngFor="let row of lockerServiceData">
+
+
+    <td>{{row.pageNo}}</td>
+    <td>{{row.pageSize}}</td>
+    <td>{{row.totalElements}}</td>
+    <td>{{row.totalPages}}</td>
+    <td>{{row.last}}</td>
+
+    <td>
+      {{row.content[0].comments[0].id}} 
+    </td>
+</tr>
+
+</tbody>
+</table>
 <ng-template #loggedOut>
   Please login.
 
-  <table class="table mt-3" >
-    <thead>
-        <tr>
-            <th scope="col"> ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">content</th>
-            <!-- <th scope="col">comments</th> -->
-
-
-            
-        </tr>
-    </thead>
-    <tbody><tr *ngFor="let row of lockerServiceData">
-        <td>{{row.content[0].id}}</td>
-        <td>{{row.content[0].title}}</td>
-        <td>{{row.content[0].description}}</td>
-        <td>{{row.content[0].content}}</td>
-        <!-- <td>{{row.content[0].comments}}</td> -->
-
-
-        <!-- "pageNo": 0,
-        "pageSize": 10,
-        "totalElements": 2,
-        "totalPages": 1,
-        "last": true -->
-        <td>
-         
-        </td>
-    </tr>
-
-    </tbody>
-</table>
-
-
-
-<table class="table mt-3" >
-  <thead>
-      <tr>
-          <th scope="col">Comment ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
-          <th scope="col">Body</th>
-          <!-- <th scope="col">comments</th> -->
-
-    
-
-          
-      </tr>
-  </thead>
-  <tbody><tr *ngFor="let row of lockerServiceData">
-      <td>{{row.content[0].comments[0].id}}</td>
-      <td>{{row.content[0].comments[0].name}}</td>
-      <td>{{row.content[0].comments[0].email}}</td>
-      <td>{{row.content[0].comments[0].body}}</td>
-      <!-- <td>{{row.content[0].comments[0]}}</td> -->
-
-   
-      <td>
-       
-      </td>
-  </tr>
-
-  </tbody>
-</table>
-
-
-<table class="table mt-3" >
-  <thead>
-      <tr>
-       
-          <th scope="col">Page No</th>
-          <th scope="col">Page Size</th>
-          <th scope="col">Total Elements</th>
-          <th scope="col">Total Pages</th>
-          <th scope="col">Last</th>
-
-          
-      </tr>
-  </thead>
-  <tbody><tr *ngFor="let row of lockerServiceData">
-
-
-      <td>{{row.pageNo}}</td>
-      <td>{{row.pageSize}}</td>
-      <td>{{row.totalElements}}</td>
-      <td>{{row.totalPages}}</td>
-      <td>{{row.last}}</td>
-
-      <td>
-        {{row.content[0].comments[0].id}} 
-      </td>
-  </tr>
- 
-  </tbody>
-</table>
+  
 
 </ng-template>

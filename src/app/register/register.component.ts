@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AuthService } from '../auth/auth.service';
 import { SignUpInfo } from '../auth/signup-info';
 
@@ -29,18 +28,125 @@ export class RegisterComponent implements OnInit {
 
     this.authService.signUp(this.signupInfo).subscribe(
       (data: any) => {
-        console.log(data);
+      //  console.log(data);
         this.isSignedUp = true;
         this.isSignUpFailed = false;
-        // if(data.startsWith)
+        console.log("The Sign Up Datas Have Been Entered Successfully.")
       }
       ,
       (error: any) => {
-        // console.log(error);
-        // this.errorMessage = error.error.message;
-        // this.isSignUpFailed = true;
-        this.isSignedUp = true;
+        console.log(error);
+        this.errorMessage = error.error.message;
+        this.isSignUpFailed = true;
+        // this.isSignedUp = true;
+        console.log("The Targeted values you want to use for registration has some errors.")
       }
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
