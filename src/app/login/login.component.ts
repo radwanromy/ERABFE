@@ -45,6 +45,7 @@ console.log("Enter in Auth Serve data");
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getAuthorities();
         this.reloadPage();
+        console.log("token:",data.accessToken);
       },
       (error:any) => {
               

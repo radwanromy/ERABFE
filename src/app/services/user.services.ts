@@ -30,7 +30,7 @@ export class UserService {
     }))
   }
 
-  getEmployee(){
+  getPosts(){
     console.log("inside get emp sevice")
      console.log(this.http.get<any>("http://localhost:9099/api/posts/"));
     return this.http.get<any>("http://localhost:9099/api/posts/")

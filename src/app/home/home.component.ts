@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+// import { FormBuilder, FormGroup } from '@angular/forms';
 import { TokenStorageService } from '../auth/token-storage.service';
 import { UserService } from '../services/user.services';
 import { LockerServiceModel } from './home.model';
-import { NgModule } from '@angular/core';
+// import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -18,11 +18,12 @@ export class HomeComponent implements OnInit {
   lockerServiceModelObj : LockerServiceModel = new LockerServiceModel();
   lockerServiceData !: any;
   contents :any;
+ 
   // showAdd !: boolean;
   // showUpdate !: boolean;
   // formValue !: FormGroup;
   // private formBuilder: FormBuilder, private api : UserService,
-  constructor( private token: TokenStorageService,private api : UserService) { }
+  constructor( private api : UserService, private token: TokenStorageService) { }
 
   //core.mjs 
   ngOnInit() {
@@ -45,6 +46,7 @@ export class HomeComponent implements OnInit {
       username: this.token.getUsername(),
       authorities: this.token.getAuthorities()
     };
+    console.log("TOken :",this.token);
 }
 
   // login(){
@@ -57,9 +59,10 @@ export class HomeComponent implements OnInit {
     window.location.reload();
   }
 
+  
   getAllDetails(){
     
-    this.api.getEmployee()
+    this.api.getPosts()
     .subscribe( (res: any) => {
     //   console.log("all blog data",res)
     //  var obj = res
@@ -105,5 +108,6 @@ console.log(" MY arr contents : ",this.contentdata);
       // this.showAdd = true;
     })
   }
+  
   
 }

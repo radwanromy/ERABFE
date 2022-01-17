@@ -1,9 +1,9 @@
 <nav class="navbar navbar-inverse" width=100%>
   <div class="container-fluid" width=100%>
     <div class="navbar-header" width=100%>
- <br><br>
+
     </div>
-    <table align="center" width=100%>
+    <!-- <table align="center" width=100%>
     <ul class="nav navbar-nav" routerLinkActive="active" style="display: inline;font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849);">
       <li class="nav-item"><a class="nav-link" routerLink="home" style="display: inline; font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849);">Home</a></li>
       <li *ngIf="authority === 'user'" class="nav-item" style="display: inline;">
@@ -19,16 +19,16 @@
         <a class="nav-link" routerLink="auth/login" style="font-size: medium; font-family:poppins; color: rgba(34, 91, 156, 0.849); padding-bottom: 10px;">Login</a><br>
       </li>
     </ul> 
-  </table>
-  <br>
+  </table> -->
+
   </div>
 </nav>
-<div class="container" align = center>
+<br><br><br>
+<!-- <div class="container" align = center> -->
   <router-outlet></router-outlet>
-</div>
-<br>
-<Br>
-  <br>
+<!-- </div> -->
+
+
 
   <div  class="fixed-footer" align="center" style="width: 100%; left: 0; ">
     <span style="color: rgb(30, 101, 163);">Developed & Maintained by: <a href="https://www.erainfotechbd.com/" >ERA InfoTech Ltd. </a> &nbsp; All rights reserved 2021 @erainfotechbd </span>
@@ -38,18 +38,84 @@
   <div class="fixed-header" style=" left: 0; height: 70px;">
     <table width="100%" style="background-origin: border-box;">
         <tr  >
-          
-            <td >
-              <p align="left" style="font-size: xx-large; padding-left: 20px; color: rgba(34, 91, 156, 0.849);">ERA BLOG APP</p>
+          <td align="left"  >  <a href="home">  <img src=".././././../assets/logo.png" height="60px" style="padding-top: 10px; padding-left: 20px;">   </a>
+          </td>
             
-            </td>
-            <td align="right"  >  <img src=".././././../assets/logo.png" height="50px" style="opacity: 80%; padding-right: 20px;">
-           </td>
+         
+           
         </tr>
-        <tr style="height: 7px;">
-            
+        <tr style="height:5px;">
+            <td>   
+ <nav class="nav">
+  <input class="nav__trigger-input" type="checkbox" id="trigger" aria-label="open the navigation"/>
+  <label class="nav__trigger-finger" for="trigger">
+    <span></span>
+  </label>
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="home" class="nav__link">
+        <span class="nav__text">
+         Home Page
+        </span>
+      </a>
+    </li>
+    <li class="nav__item">
+      <a href="signup" class="nav__link">
+        <span class="nav__text">
+        User Profile
+        </span>
+      </a>
+      <input class="nav__submenu-trigger-input" type="checkbox" id="submenu-trigger" />
+      <label class="nav__submenu-trigger-finger" for="submenu-trigger"></label>
+      <ul class="nav__list-child">
+        <li class="nav__item">
+          <a href="auth/login" class="nav__link">
+            <span class="nav__text">
+             Login Page
+            </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="signup" class="nav__link">
+            <span class="nav__text">
+              Sign Up Page
+            </span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a href="#hoi" class="nav__link">
+        <span class="nav__text">
+          Blog
+        </span>
+      </a>
+    </li>
+    <li class="nav__item">
+      <a href="#hoi" class="nav__link">
+        <span class="nav__text">
+          Contact
+        </span>
+      </a>
+    </li>
+    <li class="nav__item">
+      <a href="#hoi" class="nav__link">
+        <span class="nav__text">
+          About Us
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+</main>
+            </td>
         </tr>
         
     </table>
   </div>
+
+
 

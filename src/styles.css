@@ -153,16 +153,18 @@ label{
 .fixed-header, .fixed-footer{
   position: fixed; 
   width: 100%;  
-  background-color: rgba(255, 254, 254, 0.548); 
+  
  
   
 }
 .fixed-header{
   top: 0;
   position: fixed; 
+
 }
 .fixed-footer{
   bottom: 0;
+  background-color: rgba(255, 254, 254, 0.548); 
 }
 BODY{
   font-size: 15PX;
@@ -170,6 +172,10 @@ BODY{
   margin-left: auto;
   margin-right: auto;
   padding-right: 0px;
+  background-image: url('./assets/pikist.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .btn {
