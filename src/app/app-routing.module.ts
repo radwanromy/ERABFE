@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PmComponent } from './pm/pm.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
       path: 'signup',
       component: RegisterComponent
   },
+  {
+    path: 'contact',
+    component: ContactComponent
+},
   {
       path: '',
       redirectTo: 'home',

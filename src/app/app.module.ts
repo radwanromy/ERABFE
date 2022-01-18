@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { PmComponent } from './pm/pm.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { UserComponent } from './user/user.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     AdminComponent,
     PmComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

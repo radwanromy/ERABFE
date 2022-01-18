@@ -38,7 +38,7 @@ body {
   }
   
 
-  input {
+  input, textarea {
       
     border-top-style: hidden;
     border-right-style: hidden;
@@ -54,7 +54,7 @@ body {
     outline: none;
   }
 
-  input {
+  input,textarea {
     padding: 0px;
     margin-bottom: 0px;
     outline: none;
@@ -69,15 +69,15 @@ body {
   border-radius: 25px;
  
   box-sizing: border-box;
-  background: #ecf0f3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  background: #ecf0f37c;
+  box-shadow: 14px 14px 20px #cbced17c, -14px -14px 20px rgba(255, 255, 255, 0.481);
 }
 
 
 
 
 
-label, input, button {
+label, input, button, textarea {
   display: block;
   width: 100%;
   padding: 0;
@@ -95,7 +95,11 @@ input::placeholder {
   color: rgb(169, 159, 159);
 }
 
-input {
+textarea::placeholder {
+  color: rgb(169, 159, 159);
+}
+
+input, textarea {
   background: #ffffff;
   padding: 3px;
   padding-left: 20px;
@@ -172,7 +176,7 @@ BODY{
   margin-left: auto;
   margin-right: auto;
   padding-right: 0px;
-  background-image: url('./assets/pikist.jpg');
+  background-image: url('./assets/cool-background (1).png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
