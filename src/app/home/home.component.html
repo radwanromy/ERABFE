@@ -1,4 +1,4 @@
-<!-- 
+
 <div *ngIf="info.token; else loggedOut">
   <h5 class="text-primary">Your Information</h5>
   <p>
@@ -8,7 +8,7 @@
   </p>
   <button class="btn btn-secondary" (click)="logout()">Logout</button>
 </div>
-
+<!-- 
 <table class="table mt-3" >
   <thead>
       <tr>
@@ -18,7 +18,7 @@
           <th scope="col">content</th>
       </tr>
   </thead>
-  <tbody><tr *ngFor="let row of contentdata?.content">
+  <tbody><tr *ngFor="let row of lockerServiceData?.content">
       <td>{{row.id}}</td>
       <td>{{row.title}}</td>
       <td>{{row.description}}</td>
@@ -90,30 +90,26 @@
 
 
 <ng-template #loggedOut>
-    <div align=center>
-<br>
-<Br>
-    <br>
-<Br><br>
-    <Br>
-        <br>
-<Br>
+    <!-- <div >
 
-        <a  href="auth/login" >Do You Want To Login ?</a>
 
+    <button class="btn btn-secondary">   <a align="right" >Login</a>
+    </button>
+
+     
     </div>
-  
+   -->
 
 </ng-template>
 
 
 <table width="100%">
-  <tr>
+  <tr tr *ngFor="let row of lockerServiceData?.content">
     <td>
       <div id="container" >  
         <header role="banner">  
             <h1>  
-                <a href="/">A. S. M. Radwan</a>  
+                <a href="/">{{row.title}}</a>  
             </h1>  
         </header>  
         <nav>  
@@ -121,17 +117,16 @@
                 <!-- nav items -->  
             </ul>  
         </nav>  
-        <div id="blog" class="hidden"> This App is For ERA_InfoTech Ltd. ERA-InfoTech Ltd -A Joint Venture IT Company formed by Bank Asia Ltd, Ranks ITT Ltd of Bangladesh and Sash Tech SG Pte. Ltd, Singapore. ERA commenced it’s journey on 11th November, 2002.
-        </div>  
+        <div id="blog" class="hidden"> {{row.description}}</div>  
         <!-- blog -->  
         <article>  
             <header>  
                 <h1>  
-                    <a href="">ERA Blog App Making</a>  
+                    <a href="">{{row.content}}</a>  
                 </h1>  
                 <div class="postmeta">  
-                    <time datetime="">January 17th, 2022 &nbsp; </time>  
-                    <a href="y#comments" class="comments"> 0 Comments</a>  
+                    <time datetime="">January 18th, 2022 &nbsp; </time>  
+                    <a href="y#comments" class="comments"> {{row.comments.body}}</a>  
                 </div>  
             </header>  
             <!-- content -->  
@@ -145,10 +140,10 @@
     </tr>
 <br><br>
        
-    <div *ngIf="info.token; else loggedOut" align=center>
+    <!-- <div *ngIf="info.token; else loggedOut" align=center>
  
         <button class="btn btn-secondary" (click)="logout()">Logout</button>
-      </div>
+      </div> -->
 
 
       <Br><br>
