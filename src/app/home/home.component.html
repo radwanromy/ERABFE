@@ -6,6 +6,17 @@
     <strong>Roles:</strong> {{info.authorities}}<br />
     <strong>Token:</strong> {{info.token}}.
   </p>
+
+  <br>
+  
+  <br>
+
+  
+  <br>
+  
+  <br>
+  
+  <br>
   <button class="btn btn-secondary" (click)="logout()">Logout</button>
 </div>
 <!-- 
@@ -103,13 +114,14 @@
 </ng-template>
 
 
-<table width="100%">
+<table width="100%" style="background-color: rgba(202, 253, 253, 0.152) ; padding-bottom: 50px; ">
   <tr tr *ngFor="let row of lockerServiceData?.content">
     <td>
       <div id="container" >  
         <header role="banner">  
-            <h1>  
-                <a href="/">{{row.title}}</a>  
+           
+            <h1 style="padding-top: 0%;">  
+                <a href="/">{{row.id}}. &nbsp;{{row.title}}</a>  
             </h1>  
         </header>  
         <nav>  
@@ -117,6 +129,7 @@
                 <!-- nav items -->  
             </ul>  
         </nav>  
+        <time datetime="" style="padding-bottom: 0%; font-style: italic;">Posted On: January 18th, 2022 &nbsp; </time>  
         <div id="blog" class="hidden"> {{row.description}}</div>  
         <!-- blog -->  
         <article>  
@@ -125,8 +138,25 @@
                     <a href="">{{row.content}}</a>  
                 </h1>  
                 <div class="postmeta">  
-                    <time datetime="">January 18th, 2022 &nbsp; </time>  
-                    <a href="y#comments" class="comments"> {{row.comments.body}}</a>  
+                   
+                    <a href="y#comments" class="comments"> 
+                        
+                        
+                        <br> Comments  </a>  <table>
+                            <tr>
+                                <td>
+                                    Name:  {{row.comments[0].name}}<br>
+                                    Email: {{row.comments[0].email}}<br>
+                                </td>
+                            </tr>
+                        </table>
+               <div style="background-color: rgba(220, 235, 219, 0.44);">
+                {{row.comments[0].body}}
+                
+               </div>
+              
+               <time align=right datetime="" style="font-size: small; font-style: oblique;">Commented On: January 18th, 2022 </time>  
+               <hr/>
                 </div>  
             </header>  
             <!-- content -->  

@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
       username: this.token.getUsername(),
       authorities: this.token.getAuthorities()
     };
-    console.log("TOken :",this.token);
+    console.log("Token :",this.token);
 }
 
   // login(){
