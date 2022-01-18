@@ -88,9 +88,20 @@
 </tbody>
 </table> -->
 
-<ng-template #loggedOut>
-  Please login.
 
+<ng-template #loggedOut>
+    <div align=center>
+<br>
+<Br>
+    <br>
+<Br><br>
+    <Br>
+        <br>
+<Br>
+
+        <a  href="auth/login" >Do You Want To Login ?</a>
+
+    </div>
   
 
 </ng-template>
@@ -132,5 +143,30 @@
       </div>  
     </td>
     </tr>
+<br><br>
+       
+    <div *ngIf="info.token; else loggedOut" align=center>
+ 
+        <button class="btn btn-secondary" (click)="logout()">Logout</button>
+      </div>
 
-<button class="btn btn-secondary" (click)="logout()">Logout</button>
+
+      <Br><br>
+        <Br><br>
+            <Br><br>
+                <Br><br>
+                    <Br><br>
+                        <Br><br>
+                            <Br><br>
+                                <Br><br>
+                                    <Br><br>
+                                        <Br><br>
+                                            <Br><br>
+                                                <Br><br>
+                                                    <Br><br>
+                                                        <Br><br>
+                                                            <Br><br>
+                                                                <Br><br>
+                                                                    <Br><br>
+                                                                        <Br><br>
+                                                                            <Br>
