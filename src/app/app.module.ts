@@ -13,6 +13,7 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { UserComponent } from './user/user.component';
 import { ContactComponent } from './contact/contact.component';
 import { PostComponent } from './post/post.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PostComponent } from './post/post.component';
     PmComponent,
     ContactComponent,
     PostComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
