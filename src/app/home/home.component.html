@@ -99,7 +99,7 @@
 </tbody>
 </table> -->
 
-<table width="100%" style="background-color: rgba(202, 253, 253, 0.152) ; padding-bottom: 50px; ">
+<table width="80%" align="center" style="background-color: rgba(202, 253, 253, 0.152) ; padding-bottom: 50px; ">
 
     <br>
     <tr tr *ngFor="let row of lockerServiceData?.content">
@@ -130,31 +130,64 @@
                    
                   
                   <div class="postmeta">  
-                       
-    
-                      Comments    
+                       <details style="display: inline; size: 50px;">
+                           <summary  >
+                          Comments     
+                           </summary>
 
-
-
+                           
                           <table>
+                            <tr>
+                                <td style="font-size:18px; color: cornflowerblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                                    {{row.comments[0].name}}  &nbsp;
+                                    <p style="display: inline; font-size: 13px; color: black; font-style: italic; font-family: Verdana, Geneva, Tahoma, sans-serif;"> {{row.comments[0].email}}</p><br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="background-color: rgba(220, 235, 219, 0.44); padding-bottom: 20px;">
+                            {{row.comments[0].body}}
+                            
+                           </div>
+                           <!-- <hr/> -->
+          
+                           <table>
+                            <tr>
+                                <td style="font-size:18px; color: cornflowerblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                                    {{row.comments[1].name}}  &nbsp;
+                                    <p style="display: inline; font-size: 13px; color: black; font-style: italic; font-family: Verdana, Geneva, Tahoma, sans-serif;"> {{row.comments[1].email}}</p><br>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="background-color: rgba(220, 235, 219, 0.44);">
+                            {{row.comments[1].body}}
+                            
+                           </div>
+                           
+
+                               
+                       
+                          
+                           <!-- <time align=right datetime="" style="font-size: small; font-style: oblique;">Commented On: January 18th, 2022 </time>   -->
+                        
+                       </details>
+    
+                      
+
+
+
+                          <!-- <table>
                               <tr>
-                                  <td>
+                                  <td style="font-style: italic; font-size: 13px;">
                                       Name:  {{row.comments[0].name}}<br>
                                       Email: {{row.comments[0].email}}<br>
                                   </td>
                               </tr>
-                          </table>
-                 <div style="background-color: rgba(220, 235, 219, 0.44);">
-                  {{row.comments[0].body}}
-                  
-                 </div>
-
-                 
-                 
-                
-                 <time align=right datetime="" style="font-size: small; font-style: oblique;">Commented On: January 18th, 2022 </time>  
-                 <hr/>
+                          </table> -->
+               
                   </div>  
+                  <hr/>
 
 
                   
@@ -169,34 +202,7 @@
         </div>  
       </td>
       </tr>
-  <br><br>
-         
-      <!-- <div *ngIf="info.token; else loggedOut" align=center>
-   
-          <button class="btn btn-secondary" (click)="logout()">Logout</button>
-        </div> -->
-  
-  
-        <Br><br>
-          <Br><br>
-              <Br><br>
-                  <Br><br>
-                      <Br><br>
-                          <Br><br>
-                              <Br><br>
-                                  <Br><br>
-                                      <Br><br>
-                                          <Br><br>
-                                              <Br><br>
-                                                  <Br><br>
-                                                      <Br><br>
-                                                          <Br><br>
-                                                              <Br><br>
-                                                                  <Br><br>
-                                                                      <Br><br>
-                                                                          <Br><br>
-                                                                              <Br>
-  
+      
   </table>
 
 <ng-template #loggedOut>
