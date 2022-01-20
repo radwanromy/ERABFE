@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PmComponent } from './pm/pm.component';
+import { PostComponent } from './post/post.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+},
+{
+    path: 'addpost',
+    component: PostComponent
 },
   {
       path: '',

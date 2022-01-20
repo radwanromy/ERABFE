@@ -14,9 +14,9 @@
     z-index: 10;
     display: flex;
     align-items: center;
-    width: 15px;
+    width:20px;
     height: 10px;
-    margin: 30px;
+    margin:20px;
     color: rgba(89, 154, 197, 0.659);;
   }
   .nav__trigger-finger::before {
@@ -92,12 +92,12 @@
     position: fixed;
     overflow-y: scroll;
     top: 0;
-    left: 0;
-    bottom: 0;
+    left: .9;
+    bottom: .9;
     right: 0;
     z-index: -1;
     background: rgba(89, 154, 197, 0.837);
-    font-size: 4rem;
+    font-size: 30px;
     padding: 50px;
     transform: translate(100vw) rotate(45deg);
     transition: 0.2s cubic-bezier(0.75, 0, 0.25, 1);
@@ -130,7 +130,7 @@
   }
   .nav__list-child {
     display: none;
-    font-size: 3rem;
+    font-size:25px;
     margin-top: 8px;
 
     padding-left: 5rem;
@@ -140,7 +140,7 @@
     padding: 6rem 4rem;
   }
   main h1 {
-    font-size: 3rem;
+    font-size:20px;
     font-weight: normal;
   }
   main h1 span {

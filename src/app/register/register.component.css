@@ -1,3 +1,12 @@
+/* BODY {
+    font-size: 15PX;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0px;
+    
+} */
+
 ul {
     display: block;
     list-style-type: disc;
@@ -9,10 +18,9 @@ ul {
 }
 
 .container{
-    width:40%;
+    width:400px;
     align-content: space-around;
 }
 label{
-    font-size:18px;
-    left: 0;
+    font-size: 18px;
 }

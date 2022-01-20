@@ -4,7 +4,8 @@ import { SignUpInfo } from '../auth/signup-info';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html'
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
   form: any = {};

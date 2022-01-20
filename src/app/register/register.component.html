@@ -1,4 +1,7 @@
-<div class="container" align = center>
+<div align = center>
+<br><br>
+
+  <div class="container" align = center>
 
 <div *ngIf="isSignedUp; else signupForm">
   Your registration is successful. Please login!
@@ -10,10 +13,11 @@
       <div class="form-group">
       
         <img src=".././././../assets/download.png" style="opacity: 80%;">
+        <bR>
         <label for="name">Your Name</label>
         <input type="text" class="form-control" name="name" [(ngModel)]="form.name" #name="ngModel" required />
         <div *ngIf="f.submitted && name.invalid">
-          <div *ngIf="name.errors?.['required']">Name is required</div>
+          <div *ngIf="name.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Name is required</div>
         </div>
       </div>
       <div class="form-group">
@@ -21,15 +25,15 @@
         <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel"
           required />
         <div *ngIf="f.submitted && username.invalid">
-          <div *ngIf="username.errors?.['required']">Username is required</div>
+          <div *ngIf="username.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Username is required</div>
         </div>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
         <input type="text" class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel" required email />
         <div *ngIf="f.submitted && email.invalid">
-          <div *ngIf="email.errors?.['required']">Email is required</div>
-          <div *ngIf="email.errors?.['email']">Email must be a valid email address</div>
+          <div *ngIf="email.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Email is required</div>
+          <div *ngIf="email.errors?.['email']" style="font-size: 13px; color: brown; font-style: italic;">Email must be a valid email address</div>
         </div>
       </div>
       <div class="form-group">
@@ -37,8 +41,8 @@
         <input type="password" class="form-control" name="password" [(ngModel)]="form.password" #password="ngModel"
           required minlength="6" />
         <div *ngIf="f.submitted && password.invalid">
-          <div *ngIf="password.errors?.['required']">Password is required</div>
-          <div *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</div>
+          <div *ngIf="password.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Password is required</div>
+          <div *ngIf="password.errors?.['minlength']" style="font-size: 13px; color: brown; font-style: italic;">Password must be at least 6 characters</div>
         </div>
       </div>
       <div class="form-group"  style="padding-top: 20px;">
@@ -57,5 +61,6 @@
   </div >
   <p style="padding-bottom: 20px;"><br></p>
 </ng-template>
+</div>
 
 </div>

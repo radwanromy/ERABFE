@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   // lockerServiceData!: any;
   allData : any;
   contentdata: any = [];
+  x : any;
 
   lockerServiceModelObj : LockerServiceModel = new LockerServiceModel();
   lockerServiceData !: any;
@@ -59,6 +60,23 @@ export class HomeComponent implements OnInit {
     window.location.reload();
   }
 
+
+  // myFunction(){
+  //   let x = null;
+  //    x = document.getElementById("myDIV");
+  //   if( this.x.style.display === "none"){
+  //     this.x.style.display = "block";
+  //     console.log("using if")
+  //   }
+  //   else {
+  //     console.log("using else")
+  //     this.x.style.display = "none";
+  //   }
+  // }
+
+
+
+
   
   getAllDetails(){
     
@@ -70,6 +88,7 @@ export class HomeComponent implements OnInit {
     //  console.log("all data",this.allData);
     //  console.log("singele dtaa",this.allData.get());
     //itterate the posts
+    console.log("All The Blogs.");
     this.contents = res.content;
     console.log("contents ",this.contents)
     let oneContent:any = {
@@ -108,6 +127,4 @@ console.log(" MY arr contents : ",this.contentdata);
       // this.showAdd = true;
     })
   }
-  
-  
 }

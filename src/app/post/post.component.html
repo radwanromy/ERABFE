@@ -1,0 +1,112 @@
+<div align = center>
+  <br>
+  <br>
+<div class="container" align = center>
+
+  
+
+
+  <br>
+
+<table width="100%">
+  <tr>
+    <td>
+    <div  align=center>
+<div class="modal-body"  this.showAdd = true;>
+  <form [formGroup]= "formValue" style="position: static;">
+    <img src=".././././../assets/download.png" style="opacity: 80%;">
+      <table width="100%" align="center">
+       
+          <tr  align="center" >
+              <td >
+                <div >
+                    
+                    <input  type="int" formControlName="id"  (keydown.enter)="onKeyPress($event)" placeholder="Update Or View Details By Searching ID">
+                    <label  >Post Title:</label>
+                    <input type="text" formControlName="title"  placeholder="Enter Your Post Title"  >
+                    <label  >Content:</label>
+                    <input type="text" formControlName="content"  placeholder="Enter Your Post Content"  >
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                  </div>
+                  <div >
+                      <label  >Post Description	</label>
+                      <input type="text" formControlName="description" placeholder="Post Description">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                   
+                
+              </td>
+
+            
+          </tr>
+      </table>
+      <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    </form>
+</div>
+</div>
+
+</td>
+
+
+
+
+</tr>
+<tr >
+  
+        
+</tr>
+<!-- Security From-->
+</table>
+
+
+<br>
+  
+  
+ 
+
+<div class="fixed-header">
+    <!-- <table width="100%" style="background-origin: border-box;">
+        <tr  >
+            <td align="left"  >
+              <img src="../../assets/bank-asiapxl.gif" alt="" height="95px"  width="180px" style="padding-left: 20px; padding-top: 10px;">
+            </td>
+            <td align="Center" style="padding-top: 0px;">
+                <span style=" font-family: 'Raleway',sans-serif; 
+                font-size:26px;
+                color: #32598d;">Bank Aisa-Locker Service</span> 
+                 <span style="   font-family: poppins;
+                 font: size 3px;
+                 color: #121b27;  font-size:15px;  font-family: poppins;"><br>
+                     Corporate Branch</span>
+                <span style="   font-family: poppins;
+                font: size 3px;
+                color: #121b27;  font-size:12px;  font-family: poppins;"><br>
+                    Drawer Allocation to Customer</span>
+
+                
+            </td>
+            <td align="right"  >
+               </td>
+        </tr>
+        <tr style="height: 7px;">
+            
+        </tr>
+        
+    </table> -->
+
+    
+ 
+  </div>
+
+  <div width="100%" align="center">
+    <button type="button"  class="btn btn-secondary"  onClick="window.location.reload();" style="display: inline;">Refresh</button> &nbsp;
+    <button type="button" id = "cancel" class="btn btn-danger"  data-bs-dismiss="modal" (click)=" this.formValue.reset();  this.showAdd = true;
+    this.showUpdate = false;"  style="display: inline;">Clear</button> &nbsp;
+    <button type="button" *ngIf = "showAdd" (click) = "postDetails()" class="btn btn-success"   style="display: inline;">Execuate</button>
+    <button type="button" *ngIf = "showUpdate" (click) = "updatepostDetails()" class="btn btn-primary" style="padding-left: 3px;"  style="display: inline;">Update</button>   
+    </div>
+
+<p style="padding-bottom: 20px;"><br>&nbsp;</p>
+    
+</div>
+</div>

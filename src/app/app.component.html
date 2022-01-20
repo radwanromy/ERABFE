@@ -23,7 +23,7 @@
 
   </div>
 </nav>
-<br><br><br>
+<br>
 <!-- <div class="container" align = center> -->
   <router-outlet></router-outlet>
 <!-- </div> -->
@@ -35,12 +35,18 @@
   </div>
    
 
-  <div class="fixed-header" style=" left: 0; height: 70px;">
-    <table width="100%" style="background-origin: border-box;">
+  <div class="fixed-header" style=" left: 0; height: 50px; padding-top: 0px;">
+    <table width="100%" style="background-origin: border-box;  height:45px; padding-top: 0px;" >
         <tr  >
-          <td align="left"  >  <a href="home">  <img src=".././././../assets/logo.png" height="60px" style="padding-top: 10px;  padding-left: 20px;">   </a>
+          <td align="left"  >  <a href="home">
+            <img src=".././././../assets/logo.png" style=" height:30px; padding-top: 10px; padding-left: 20px; "><img src="../assets/bloglogo.png" height="30px"  style=" padding-top: 10px; "> </a> 
           </td>
-            
+         
+          
+            <td style="padding-top: 9px;" >
+              <input type="text" placeholder="Search.." style="padding:5px; ">
+            </td>
+
          
            
         </tr>
@@ -93,6 +99,13 @@
       </a>
     </li>
     <li class="nav__item">
+      <a href="addpost" class="nav__link">
+        <span class="nav__text">
+          Post Blog
+        </span>
+      </a>
+    </li>
+    <li class="nav__item">
       <a href="contact" class="nav__link">
         <span class="nav__text">
           Contact
@@ -106,6 +119,7 @@
         </span>
       </a>
     </li>
+  
   </ul>
 </nav>
 

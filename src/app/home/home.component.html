@@ -99,6 +99,105 @@
 </tbody>
 </table> -->
 
+<table width="100%" style="background-color: rgba(202, 253, 253, 0.152) ; padding-bottom: 50px; ">
+
+    <br>
+    <tr tr *ngFor="let row of lockerServiceData?.content">
+      <td>
+        <div id="container" >  
+          <header role="banner">  
+             
+              <h1 style="padding-top: 0%;">  
+                  <a href="/">{{row.id}}. &nbsp;{{row.title}}</a>  
+              </h1>  
+          </header>  
+          <nav>  
+              <ul>  
+                  <!-- nav items -->  
+              </ul>  
+          </nav>  
+          <time datetime="" style="padding-bottom: 0%; font-style: italic;">Posted On: January 18th, 2022 &nbsp; </time>  
+          <div id="blog" class="hidden"> {{row.description}}</div>  
+          <!-- blog -->  
+          <article>  
+              <header>  
+                  <h1>  
+                      <a href="">{{row.content}}</a>  
+                  </h1>  
+
+                  
+                  <div id="myDIV">
+                   
+                  
+                  <div class="postmeta">  
+                       
+    
+                      Comments    
+
+
+
+                          <table>
+                              <tr>
+                                  <td>
+                                      Name:  {{row.comments[0].name}}<br>
+                                      Email: {{row.comments[0].email}}<br>
+                                  </td>
+                              </tr>
+                          </table>
+                 <div style="background-color: rgba(220, 235, 219, 0.44);">
+                  {{row.comments[0].body}}
+                  
+                 </div>
+
+                 
+                 
+                
+                 <time align=right datetime="" style="font-size: small; font-style: oblique;">Commented On: January 18th, 2022 </time>  
+                 <hr/>
+                  </div>  
+
+
+                  
+                </div>
+              </header>  
+              <!-- content -->  
+              <aside class="comments" id="comments">  
+                  <!-- comments -->  
+              </aside>  
+              <!-- comments -->  
+          </article>  
+        </div>  
+      </td>
+      </tr>
+  <br><br>
+         
+      <!-- <div *ngIf="info.token; else loggedOut" align=center>
+   
+          <button class="btn btn-secondary" (click)="logout()">Logout</button>
+        </div> -->
+  
+  
+        <Br><br>
+          <Br><br>
+              <Br><br>
+                  <Br><br>
+                      <Br><br>
+                          <Br><br>
+                              <Br><br>
+                                  <Br><br>
+                                      <Br><br>
+                                          <Br><br>
+                                              <Br><br>
+                                                  <Br><br>
+                                                      <Br><br>
+                                                          <Br><br>
+                                                              <Br><br>
+                                                                  <Br><br>
+                                                                      <Br><br>
+                                                                          <Br><br>
+                                                                              <Br>
+  
+  </table>
 
 <ng-template #loggedOut>
     <!-- <div >
@@ -112,86 +211,3 @@
    -->
 
 </ng-template>
-
-
-<table width="100%" style="background-color: rgba(202, 253, 253, 0.152) ; padding-bottom: 50px; ">
-  <tr tr *ngFor="let row of lockerServiceData?.content">
-    <td>
-      <div id="container" >  
-        <header role="banner">  
-           
-            <h1 style="padding-top: 0%;">  
-                <a href="/">{{row.id}}. &nbsp;{{row.title}}</a>  
-            </h1>  
-        </header>  
-        <nav>  
-            <ul>  
-                <!-- nav items -->  
-            </ul>  
-        </nav>  
-        <time datetime="" style="padding-bottom: 0%; font-style: italic;">Posted On: January 18th, 2022 &nbsp; </time>  
-        <div id="blog" class="hidden"> {{row.description}}</div>  
-        <!-- blog -->  
-        <article>  
-            <header>  
-                <h1>  
-                    <a href="">{{row.content}}</a>  
-                </h1>  
-                <div class="postmeta">  
-                   
-                    <a href="y#comments" class="comments"> 
-                        
-                        
-                        <br> Comments  </a>  <table>
-                            <tr>
-                                <td>
-                                    Name:  {{row.comments[0].name}}<br>
-                                    Email: {{row.comments[0].email}}<br>
-                                </td>
-                            </tr>
-                        </table>
-               <div style="background-color: rgba(220, 235, 219, 0.44);">
-                {{row.comments[0].body}}
-                
-               </div>
-              
-               <time align=right datetime="" style="font-size: small; font-style: oblique;">Commented On: January 18th, 2022 </time>  
-               <hr/>
-                </div>  
-            </header>  
-            <!-- content -->  
-            <aside class="comments" id="comments">  
-                <!-- comments -->  
-            </aside>  
-            <!-- comments -->  
-        </article>  
-      </div>  
-    </td>
-    </tr>
-<br><br>
-       
-    <!-- <div *ngIf="info.token; else loggedOut" align=center>
- 
-        <button class="btn btn-secondary" (click)="logout()">Logout</button>
-      </div> -->
-
-
-      <Br><br>
-        <Br><br>
-            <Br><br>
-                <Br><br>
-                    <Br><br>
-                        <Br><br>
-                            <Br><br>
-                                <Br><br>
-                                    <Br><br>
-                                        <Br><br>
-                                            <Br><br>
-                                                <Br><br>
-                                                    <Br><br>
-                                                        <Br><br>
-                                                            <Br><br>
-                                                                <Br><br>
-                                                                    <Br><br>
-                                                                        <Br><br>
-                                                                            <Br>
