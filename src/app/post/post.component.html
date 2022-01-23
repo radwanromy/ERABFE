@@ -102,7 +102,7 @@
     <button type="button"  class="btn btn-secondary"  onClick="window.location.reload();" style="display: inline;">Refresh</button> &nbsp;
     <button type="button" id = "cancel" class="btn btn-danger"  data-bs-dismiss="modal" (click)=" this.formValue.reset();  this.showAdd = true;
     this.showUpdate = false;"  style="display: inline;">Clear</button> &nbsp;
-    <button type="button" *ngIf = "showAdd" (click) = "postDetails()" class="btn btn-success"   style="display: inline;">Execuate</button>
+    <button type="button" *ngIf = "showAdd" (click) = "postDetails()" class="btn btn-success"   style="display: inline;">Post</button>
     <button type="button" *ngIf = "showUpdate" (click) = "updatepostDetails()" class="btn btn-primary" style="padding-left: 3px;"  style="display: inline;">Update</button>   
     </div>
 
