@@ -59,16 +59,24 @@ export class PostComponent implements OnInit {
 
 
   
+    console.log("form title ",this.formValue.value.title)
+    console.log("form title ",this.formValue.value.description)
+    console.log("form title ",this.formValue.value.content)
+    
     // this.PostModelObj.id=this.formValue.value.id;
     this.PostModelObj.title = this.formValue.value.title;
     this.PostModelObj.description = this.formValue.value.description;
     this.PostModelObj.content = this.formValue.value.content;
+    var postData = {
+      title :  this.formValue.value.title,
+      description : this.formValue.value.description,
+      content : this.formValue.value.content
+    }
 
-    
+    console.log(" post data ",postData)
     
 
-    this.api.postblog(this.PostModelObj)
-    .subscribe(res => {
+    this.api.postblog(postData).subscribe(res => {
       console.log(res);
       alert("Blog Post Added Successfully.")
       let ref = document.getElementById('cancel')
@@ -81,6 +89,28 @@ export class PostComponent implements OnInit {
     err=>{
       alert("Something went wrong with insert");
     })
+
+
+// this.setupService.addNewUser(this.parameters).subscribe(data => {
+//   this.map = data;
+//   console.log(data);
+//   const options = { closeButton: true, tapToDismiss: false, timeOut: 5000, opacity: 1 };
+//   this.toastrService.clear();
+//   this.toastrService.success('Registration Successfully Completed!', 'Welcome!', options);
+// }, (error: any) => {
+//   console.log(error);
+//   const options = { closeButton: true, tapToDismiss: false, timeOut: 10000, opacity: 1 };
+//   this.toastrService.clear();
+//   this.toastrService.error('Email and Username Must Be Unique!', 'Registration Failed!', options);
+// }
+// );
+
+
+
+
+
+
+
   }
 
 

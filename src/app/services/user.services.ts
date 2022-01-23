@@ -24,10 +24,12 @@ export class UserService {
     return this.http.get(this.adminUrl, { responseType: 'text' });
   }
   postblog(data: any){
-    return this.http.post<any>("http://localhost:9099/api/posts", data)
-    .pipe(map((res: any) => {
-      return res;
-    }))
+    console.log("the data ",data)
+    console.log("the datfvcdfbcfba ")
+    return this.http.post<any>(`http://localhost:9099/api/posts/add`, data)
+    // .pipe(map((res: any) => {
+    //   return res;
+    // }))
   }
 
   getPosts(){
