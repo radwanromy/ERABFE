@@ -206,9 +206,11 @@ console.log(" MY arr contents : ",this.contentdata);
 
 
   updatepostDetails(){
-    this.PostModelObj.title = this.formValue.value.title;
-    this.PostModelObj.description = this.formValue.value.description;
-    this.PostModelObj.content = this.formValue.value.content;
+
+    // this.PostModelObj.id=this.formValue.value.id;
+    this.PostModelObj.title=this.formValue.value.title;
+    this.PostModelObj.description=this.formValue.value.description;
+    this.PostModelObj.content=this.formValue.value.content;
       // console.log(this.lockerServiceModelObj);
        this.api.updatePost(this.PostModelObj,this.PostModelObj.id)
        .subscribe(res=>{
@@ -242,29 +244,35 @@ console.log(" MY arr contents : ",this.contentdata);
         this.form.title,
         this.form.content,
         this.form.description
+
+
+        
       );
-  
-  
-      this.authService.post(this.postInfo).subscribe(
+
+      this.authService.post(this.postInfo)
+      .subscribe(
         (data: any) => {
-        //  console.log(data);
+
+         
+          console.log(data);
           this.isPost = true;
           this.isPostFailed = false;
           console.log("The Sign Up Datas Have Been Entered Successfully.")
         }
         ,
         (error: any) => {
+      
           console.log(error);
           this.errorMessage = error.error.message;
           this.isPostFailed = true;
-          // this.isSignedUp = true;
+          // this.isPost = true;
           console.log("The Targeted values you want to use for registration has some errors.")
         }
       );
   
       }
 
-      
+
 }
 
 

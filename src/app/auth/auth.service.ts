@@ -18,7 +18,7 @@ export class AuthService {
 
   private loginUrl = 'http://localhost:9099/api/auth/signin';
   private signupUrl = 'http://localhost:9099/api/auth/signup';
-  private postUrl = 'http://localhost:9099/api/posts/add';
+  private postUrl = 'http://localhost:9099/api/posts';
 
   constructor(private http: HttpClient) {
   }

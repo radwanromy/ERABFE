@@ -1,14 +1,14 @@
 export class PostInfo {
     title: any;
-    content: any;
-    description: any;
-    comments: any[] | undefined;
+    email: any;
+    body: any;
+    // comments: any[] ;
     
 
-    constructor( title: any, content: any,description: any) {
-        this. title =  title;
-        this.content =content;
-        this.description = description;
-        this.comments= ['user'];
+    constructor( title: any, email: any,body: any) {
+        this.title =  title;
+        this.email =email;
+        this.body = body;
+        // this.comments= ['Admin'];
     }
 }
