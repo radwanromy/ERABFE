@@ -1,4 +1,4 @@
-<div align = center>
+<!-- <div align = center>
   <br>
   <br>
 <div class="container" align = center>
@@ -26,13 +26,11 @@
                     <input type="text" formControlName="title"  placeholder="Enter Your Post Title"  >
                     <label  >Content:</label>
                     <input type="text" formControlName="content"  placeholder="Enter Your Post Content"  >
-                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                   </div>
                   <div >
                       <label  >Post Description	</label>
                       <input type="text" formControlName="description" placeholder="Post Description">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                    </div>
+                  </div>
                    
                 
               </td>
@@ -40,8 +38,7 @@
             
           </tr>
       </table>
-      <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-    </form>
+   </form>
 </div>
 </div>
 
@@ -55,7 +52,6 @@
   
         
 </tr>
-<!-- Security From-->
 </table>
 
 
@@ -65,35 +61,7 @@
  
 
 <div class="fixed-header">
-    <!-- <table width="100%" style="background-origin: border-box;">
-        <tr  >
-            <td align="left"  >
-              <img src="../../assets/bank-asiapxl.gif" alt="" height="95px"  width="180px" style="padding-left: 20px; padding-top: 10px;">
-            </td>
-            <td align="Center" style="padding-top: 0px;">
-                <span style=" font-family: 'Raleway',sans-serif; 
-                font-size:26px;
-                color: #32598d;">Bank Aisa-Locker Service</span> 
-                 <span style="   font-family: poppins;
-                 font: size 3px;
-                 color: #121b27;  font-size:15px;  font-family: poppins;"><br>
-                     Corporate Branch</span>
-                <span style="   font-family: poppins;
-                font: size 3px;
-                color: #121b27;  font-size:12px;  font-family: poppins;"><br>
-                    Drawer Allocation to Customer</span>
-
-                
-            </td>
-            <td align="right"  >
-               </td>
-        </tr>
-        <tr style="height: 7px;">
-            
-        </tr>
-        
-    </table> -->
-
+  
     
  
   </div>
@@ -109,4 +77,72 @@
 <p style="padding-bottom: 20px;"><br>&nbsp;</p>
     
 </div>
-</div>
+</div> -->
+
+
+<div align = center>
+  <br><br>
+  
+    <div class="container" align = center>
+  
+  <div *ngIf="isPost; else signupForm">
+    Your registration is successful. Please login!
+  </div>
+  
+  <ng-template #signupForm>
+    <div class="row col-sm-6" style="max-width:350px;">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+        
+          <img src=".././././../assets/download.png" style="opacity: 80%;">
+          <bR>
+          <label for="title">Title</label>
+          <input type="text" class="form-control" name="title" [(ngModel)]="form.title" #title="ngModel" required />
+          <div *ngIf="f.submitted && title.invalid">
+            <div *ngIf="title.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Name is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          <input type="text" class="form-control" name="content" [(ngModel)]="form.content" #content="ngModel"
+            required />
+          <div *ngIf="f.submitted && content.invalid">
+            <div *ngIf="content.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Content is required</div>
+          </div>
+        </div>
+        <!-- <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel" required />
+          <div *ngIf="f.submitted && email.invalid">
+            <div *ngIf="email.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Email is required</div>
+            <div *ngIf="email.errors?.['email']" style="font-size: 13px; color: brown; font-style: italic;">Email must be a valid email address</div>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" name="description" [(ngModel)]="form.description" #description="ngModel"
+            required />
+          <div *ngIf="f.submitted && description.invalid">
+            <div *ngIf="description.errors?.['required']" style="font-size: 13px; color: brown; font-style: italic;">Description is required</div>
+            <!-- <div *ngIf="description.errors?.['minlength']" style="font-size: 13px; color: brown; font-style: italic;">Password must be at least 6 characters</div> -->
+          </div>
+        </div>
+        <div class="form-group"  style="padding-top: 20px;">
+          <button class="btn btn-primary">Post</button>
+          <!-- <div *ngIf="f.submitted && isSignedUp" class="alert alert">
+            Signup successful!<br/>
+          </div>  -->
+          <div *ngIf="f.submitted && isPostFailed" class="alert alert-warning">
+            Signup failed!<br/>{{errorMessage}}
+          </div>
+        </div>
+      </form>
+      <hr />
+      <!-- <p>Do You Have Any Account?</p>
+      <a href="/auth/login" class="btn btn-success" >Log In</a > -->
+    </div >
+    <p style="padding-bottom: 20px;"><br></p>
+  </ng-template>
+  </div>
+  
+  </div>

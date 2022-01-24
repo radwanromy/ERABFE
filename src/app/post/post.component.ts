@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { TokenStorageService } from '../auth/token-storage.service';
 import { UserService } from '../services/user.services';
 import { PostModel } from './post.model';
-
+import { AuthService } from '../auth/auth.service';
+import { PostInfo } from '../auth/post-info';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -11,6 +12,11 @@ import { PostModel } from './post.model';
 })
 export class PostComponent implements OnInit {
 
+  form: any = {};
+  postInfo !: PostInfo;
+  isPost = false;
+  isPostFailed = false;
+  errorMessage = '';
 
   info: any;
   // lockerServiceData!: any;
@@ -26,10 +32,11 @@ export class PostComponent implements OnInit {
   showUpdate !: boolean;
   formValue !: FormGroup;
   // private formBuilder: FormBuilder, private api : UserService,
-  constructor(private formBuilder: FormBuilder,
+  constructor(private authService: AuthService, private formBuilder: FormBuilder,
     private api :UserService, private token: TokenStorageService) { }
 
   ngOnInit(): void {
+    console.log(this.form);
     this.formValue = this.formBuilder.group({
 
       id:[''],
@@ -37,6 +44,12 @@ export class PostComponent implements OnInit {
       description:[''],
       content:['']
     })
+
+
+
+    
+
+
     this.getAllDetails();
 
     this.info = {
@@ -212,6 +225,46 @@ console.log(" MY arr contents : ",this.contentdata);
 
         
     }
+
+
+
+
+
+
+
+
+
+
+
+    onSubmit() {
+
+      this.postInfo = new PostInfo(
+        this.form.title,
+        this.form.content,
+        this.form.description
+      );
+  
+  
+      this.authService.post(this.postInfo).subscribe(
+        (data: any) => {
+        //  console.log(data);
+          this.isPost = true;
+          this.isPostFailed = false;
+          console.log("The Sign Up Datas Have Been Entered Successfully.")
+        }
+        ,
+        (error: any) => {
+          console.log(error);
+          this.errorMessage = error.error.message;
+          this.isPostFailed = true;
+          // this.isSignedUp = true;
+          console.log("The Targeted values you want to use for registration has some errors.")
+        }
+      );
+  
+      }
+
+      
 }
 
 
