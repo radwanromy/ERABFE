@@ -11,23 +11,18 @@ import { PostInfo } from '../auth/post-info';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-
   form: any = {};
   postInfo !: PostInfo;
   isPost = false;
   isPostFailed = false;
   errorMessage = '';
-
   info: any;
   // lockerServiceData!: any;
   allData : any;
   contentdata: any = [];
-
-  
   PostModelObj : PostModel = new PostModel();
   PostData !: any;
   contents :any;
- 
   showAdd !: boolean;
   showUpdate !: boolean;
   formValue !: FormGroup;
@@ -146,7 +141,7 @@ export class PostComponent implements OnInit {
             description: "",
             content: ""
     }
-
+ 
     for (let i = 0; i < this.contents.length; i++) {
   console.log(i," starts")
   oneContent={
@@ -174,8 +169,6 @@ console.log(" MY arr contents : ",this.contentdata);
       this.getAllDetails();
     })
   }
-
-
   getOnForm(row: any){
     this.PostModelObj.id = row.id;
     this.formValue.controls['title'].patchValue(row.title);
@@ -185,6 +178,8 @@ console.log(" MY arr contents : ",this.contentdata);
     this.showAdd= false;
     this.showUpdate= true;
   }
+
+
 
   onKeyPress(event : any){
     console.log("Event Succefully");
@@ -251,9 +246,8 @@ console.log(" MY arr contents : ",this.contentdata);
 
       this.authService.post(this.postInfo)
       .subscribe(
-        (data: any) => {
+        data => {
 
-         
           console.log(data);
           this.isPost = true;
           this.isPostFailed = false;
@@ -271,8 +265,6 @@ console.log(" MY arr contents : ",this.contentdata);
       );
   
       }
-
-
 }
 
 
