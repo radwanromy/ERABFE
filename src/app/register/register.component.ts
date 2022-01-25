@@ -24,7 +24,6 @@ export class RegisterComponent implements OnInit {
       this.form.password);
     this.authService.signUp(this.signupInfo).subscribe(
       (data: any) => {
-      //  console.log(data);
         this.isSignedUp = true;
         this.isSignUpFailed = false;
         console.log("The Sign Up Datas Have Been Entered Successfully.")
@@ -34,107 +33,8 @@ export class RegisterComponent implements OnInit {
         console.log(error);
         this.errorMessage = error.error.message;
         this.isSignUpFailed = true;
-        // this.isSignedUp = true;
         console.log("The Targeted values you want to use for registration has some errors.")
       }
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

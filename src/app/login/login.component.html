@@ -1,11 +1,7 @@
 <div align = center>
-
 <br>
 <br>
-
-
 <div class="container" align = center>
-
 <div *ngIf="isLoggedIn; else loggedOut" align = center>
   Logged in as {{roles}}.  
 <br>
@@ -13,16 +9,11 @@
   A. S. M. Radwan
 </p>
 <table align = center>
-  <div align=center>
- 
-       
-            <div class="profile-menu" align=center>
-             
+  <div align=center> 
+            <div class="profile-menu" align=center>            
               <div class="profile-picture small-profile-picture" align = center>
-                  <img width="140px" src="./../../assets/user-icon-png-pnglogocom.png">
-                  
-              </div>
-              
+                  <img width="140px" src="./../../assets/user-icon-png-pnglogocom.png">             
+              </div>            
           </div>
               <ul align=center>
                   <li  style="display: inline;"  align=center>
@@ -33,18 +24,14 @@
                   </li > &nbsp;
                   <li  style="display: inline;"  align=center>
                       <a    href="#3"  style="display: inline;"  align=center><span class="icon fontawesome-envelope scnd-font-color"  style="display: inline;"  align=center></span>My Blogs</a>
-                  
                   </li> &nbsp;
                   <li  style="display: inline;"  align=center>
                       <a    href="#5"  style="display: inline;"  align=center><span class="icon fontawesome-star-empty scnd-font-color"  style="display: inline;"  align=center></span>Favorites</a>
                   </li>
-              </ul>
-    
+              </ul>  
       </div>
- 
 </table>
 </div>
-
 <ng-template #loggedOut>
   <div class="row col-sm-6" style="max-width:350px;">
     <img src=".././././../assets/download.png" style="opacity: 80%;">
@@ -68,7 +55,6 @@
       </div>
       <div class="form-group" style="padding-top: 20px;">
         <button class="btn btn-primary" >LOGIN</button>
-
         <!-- <button class="btn btn-primary"  click="attemptAuth()">attemptAuth</button> -->
         <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
           Login failed: {{errorMessage}}
@@ -81,8 +67,5 @@
   </div >
   <p style="padding-bottom: 20px;"><br></p>
 </ng-template>
-
 </div>
-
-
 </div>

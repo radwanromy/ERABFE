@@ -1,17 +1,13 @@
 <div align = center>
 <br><br>
-
   <div class="container" align = center>
-
 <div *ngIf="isSignedUp; else signupForm">
   Your registration is successful. Please login!
 </div>
-
 <ng-template #signupForm>
   <div class="row col-sm-6" style="max-width:350px;">
     <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-      <div class="form-group">
-      
+      <div class="form-group">     
         <img src=".././././../assets/download.png" style="opacity: 80%;">
         <bR>
         <label for="name">Your Name</label>
@@ -62,5 +58,4 @@
   <p style="padding-bottom: 20px;"><br></p>
 </ng-template>
 </div>
-
 </div>

@@ -2,12 +2,7 @@
   <br>
   <br>
 <div class="container" align = center>
-
-  
-
-
   <br>
-
 <table width="100%">
   <tr>
     <td>
@@ -15,12 +10,10 @@
 <div class="modal-body"  this.showAdd = true;>
   <form [formGroup]= "formValue" style="position: static;">
     <img src=".././././../assets/download.png" style="opacity: 80%;">
-      <table width="100%" align="center">
-       
+      <table width="100%" align="center">       
           <tr  align="center" >
               <td >
-                <div >
-                    
+                <div >                   
                     <input  type="int" formControlName="id"  (keydown.enter)="onKeyPress($event)" placeholder="Update Or View Details By Searching ID">
                     <label  >Post Title:</label>
                     <input type="text" formControlName="title"  placeholder="Enter Your Post Title"  >
@@ -30,42 +23,19 @@
                   <div >
                       <label  >Post Description	</label>
                       <input type="text" formControlName="description" placeholder="Post Description">
-                  </div>
-                   
-                
+                  </div>   
               </td>
-
-            
           </tr>
       </table>
    </form>
 </div>
 </div>
-
 </td>
-
-
-
-
-</tr>
-<tr >
-  
-        
 </tr>
 </table>
-
-
 <br>
-  
-  
- 
-
 <div class="fixed-header">
-  
-    
- 
   </div>
-
   <div width="100%" align="center">
     <button type="button"  class="btn btn-secondary"  onClick="window.location.reload();" style="display: inline;">Refresh</button> &nbsp;
     <button type="button" id = "cancel" class="btn btn-danger"  data-bs-dismiss="modal" (click)=" this.formValue.reset();  this.showAdd = true;
@@ -73,22 +43,15 @@
     <button type="button" *ngIf = "showAdd" (click) = "postDetails()" class="btn btn-success"   style="display: inline;">Post</button>
     <button type="button" *ngIf = "showUpdate" (click) = "updatepostDetails()" class="btn btn-primary" style="padding-left: 3px;"  style="display: inline;">Update</button>   
     </div>
-
-<p style="padding-bottom: 20px;"><br>&nbsp;</p>
-    
+<p style="padding-bottom: 20px;"><br>&nbsp;</p>  
 </div>
 </div>
-
-
 <div align = center>
-  <br><br>
-  
-    <div class="container" align = center>
-  
+  <br><br>  
+  <div class="container" align = center> 
   <div *ngIf="isPost; else signupForm">
     Your registration is successful. Please login!
-  </div>
-  
+  </div>  
   <ng-template #signupForm>
     <div class="row col-sm-6" style="max-width:350px;">
       <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
@@ -144,5 +107,4 @@
     <p style="padding-bottom: 20px;"><br></p>
   </ng-template>
   </div>
-  
   </div>
