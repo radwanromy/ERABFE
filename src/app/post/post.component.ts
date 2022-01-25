@@ -239,15 +239,11 @@ console.log(" MY arr contents : ",this.contentdata);
         this.form.title,
         this.form.content,
         this.form.description
-
-
-        
       );
 
       this.authService.post(this.postInfo)
       .subscribe(
         data => {
-
           console.log(data);
           this.isPost = true;
           this.isPostFailed = false;
@@ -255,7 +251,6 @@ console.log(" MY arr contents : ",this.contentdata);
         }
         ,
         (error: any) => {
-      
           console.log(error);
           this.errorMessage = error.error.message;
           this.isPostFailed = true;
