@@ -78,7 +78,6 @@
       <td>
         <div id="container" >  
           <header role="banner">  
-             
               <h1 style="padding-top: 0%;">  
                   <a href="/">{{row.id}}. &nbsp;{{row.title}}</a>  
               </h1>  
@@ -95,39 +94,8 @@
               <header>  
                   <h1>  
                       <a href="">{{row.content}}</a>  
-                  </h1>  
-              
+                  </h1>              
                   <div id="myDIV">
-<!--                             
-                  <div class="postmeta">  
-                       <details style="display: inline; size: 50px;">
-                           <summary  >
-                          Comments     
-                           </summary>                         
-                          <table>
-                            <tr>
-                                <td style="font-size:18px; color: cornflowerblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-                                    {{row.comments[0].name}}  &nbsp;
-                                    <p style="display: inline; font-size: 13px; color: black; font-style: italic; font-family: Verdana, Geneva, Tahoma, sans-serif;"> {{row.comments[0].email}}</p><br>
-                                </td>
-                            </tr>
-                        </table>
-                        <div style="background-color: rgba(220, 235, 219, 0.44); padding-bottom: 20px;">
-                            {{row.comments[0].body}}
-                           </div>
-                           <table>
-                            <tr>
-                                <td style="font-size:18px; color: cornflowerblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-                                    {{row.comments[1].name}}  &nbsp;
-                                    <p style="display: inline; font-size: 13px; color: black; font-style: italic; font-family: Verdana, Geneva, Tahoma, sans-serif;"> {{row.comments[1].email}}</p><br>
-                                </td>
-                            </tr>
-                        </table>
-                        <div style="background-color: rgba(220, 235, 219, 0.44);">
-                            {{row.comments[1].body}}
-                           </div> 
-                       </details>   
-                  </div>   -->
                   <hr/>
                 </div>
               </header>  
@@ -142,9 +110,5 @@
       </tr>
   </table>
 <ng-template #loggedOut>
-    <!-- <div >
-    <button class="btn btn-secondary">   <a align="right" >Login</a>
-    </button> 
-    </div>
-   -->
+  
 </ng-template>
